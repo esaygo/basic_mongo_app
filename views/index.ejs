@@ -1,0 +1,32 @@
+<html>
+<head>
+<title></title>
+    <link rel='stylesheet' href='css/style.css' />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- <script type ="text/javascript" src="/socket.io/socket.io.js"></script> -->
+    <script type ="text/javascript">
+        $(document).ready(function (){
+
+  }); //end of document ready
+
+    </script>
+<style>
+
+</style>
+</head>
+<body>
+  <center>
+    <form id="post_form" action="/users" method="post">
+      <label>Name: <input id="name" type='text' name='name'></label></br>
+      <label>Age: <input id="age" type='text' name='age'></label></br>
+      <input type='submit' value='create user'>
+    </form>
+  </center>
+  <div id="users">
+    <% for(var index in users) { %>
+      <p>Name: <%= users[index].name %>
+      <p>Age: <%= users[index].age %>
+    <% } %>
+  </div>
+</body>
+</html>
